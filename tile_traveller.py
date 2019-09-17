@@ -13,30 +13,48 @@ Start of the program the user gets directions and is asked for input.
 A loop utilizes the functions and direction input from user until the player reaches the end goal.
 """
 
-tile_11 = "(N)orth" 
-tile_12 = "(N)orth, (E)ast, (S)outh"
-tile_13 = "(E)ast, (S)outh"
-tile_21 = "(N)orth"
-tile_22 = "(W)est, (S)outh"
-tile_23 = "(W)est, (E)ast"
-tile_31 = "(N)orth"
-tile_32 = "(N)orth, (S)outh"
-tile_33 = "(W)est, (S)outh"
+#GitHub = https://github.com/ingunn19/Hakuna_Matata/blob/master/tile_traveller.py
 
-start_tile = tile_11
-finish_tile = tile_31
 
-def location():
-    return location
-def move():
+start_x = 1
+start_y = 1
+finish_x = 3
+finish_y = 1
+
+current_x = start_x
+current_y = start_y
+
+def paths():
+    if current_x == 1 and current_y == 1:
+        direction_str = "You can travel: (N)orth"
+    if current_x == 1 and current_y == 2:
+        direction_str = "You can travel: (N)orth or (S)outh or (E)ast"
+    if current_x == 1 and current_y == 3:
+        direction_str = "You can travel: (S)outh or (E)ast"
+    if current_x == 2 and current_y == 1:
+        direction_str = "You can travel: (N)orth"
+    if current_x == 2 and current_y == 2:
+        direction_str = "You can travel: (S)outh or (W)est"
+    if current_x == 2 and current_y == 3:
+        direction_str = "You can travel: (W)est or (E)ast"
+    if current_x == 3 and current_y == 2:
+        direction_str = "You can travel: (N)orth or (S)outh"
+    if current_x == 3 and current_y == 3:
+        direction_str = "You can travel: (S)outh or (W)est"
+        
+    return str(paths)
+
+
+def move(direction):
     return move
 
-current_location = start_tile
 
-while current_location != finish_tile:
-    location()
+
+while current_x != finish_x and current_y != finish_y:
+    path_str = paths()
     direction = input("Direction: ")
-    move()
+    #move()
+    print(path_str)
 
 print("Victory!")
 
