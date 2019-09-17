@@ -12,3 +12,31 @@ Make a function that takes in the direction the user specifies and either moves 
 Start of the program the user gets directions and is asked for input.
 A loop utilizes the functions and direction input from user until the player reaches the end goal.
 """
+
+tile_11 = "(N)orth" 
+tile_12 = "(N)orth, (E)ast, (S)outh"
+tile_13 = "(E)ast, (S)outh"
+tile_21 = "(N)orth"
+tile_22 = "(W)est, (S)outh"
+tile_23 = "(W)est, (E)ast"
+tile_31 = "(N)orth"
+tile_32 = "(N)orth, (S)outh"
+tile_33 = "(W)est, (S)outh"
+
+start_tile = tile_11
+finish_tile = tile_31
+
+def location():
+    return location
+def move():
+    return move
+
+current_location = start_tile
+
+while current_location != finish_tile:
+    location()
+    direction = input("Direction: ")
+    move()
+
+print("Victory!")
+
